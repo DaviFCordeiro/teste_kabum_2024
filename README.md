@@ -14,8 +14,8 @@ anteriormente na variável "Path" (Container de baixo "Variáveis do sistema")
 - Copiar e colar o arquivo "php.ini-development" no mesmo diretorio e renomear 
 para "php.ini"
 - No arquivo "php.ini" que acabou de modificar, abrir com o bloco de notas, dar um
-find (Ctrl + F) e procurar por "pdo_mysql", remover o ; no inicio da linha
-- Fazer o mesmo procurando por ;extension_dir="ext", salvar o arquivo e fechar
+find (Ctrl + F) e procurar por "pdo_mysql", remover o ";" no inicio da linha
+- Fazer o mesmo procurando por extension_dir = "ext", salvar o arquivo e fechar
 
 2. Usaremos o xampp para criar um servidor de Banco de Dados Local
 - caso não possua, baixar o xampp
@@ -37,3 +37,7 @@ a esquerda de titulo "SCHEMAS" e selecione "Refresh all"
 5. Acessos pré definidos :
 - Login : admin
 - senha : 12345
+
+6. Caso encontre erro de acesso negado ao tentar fazer login :
+- modificar o arquivo src/peristence/DatabaseConnection.php
+- alterar as variáveis $username e $password para os acessos usados no seu MYSQL local;
